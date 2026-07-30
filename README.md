@@ -45,3 +45,25 @@ Summarizes text using Groq's LLM API. Requires `X-API-Key` header matching `APP_
 ```json
 { "text": "Your text here (up to 10,000 characters)" }
 ```
+
+## Testing
+
+Install test dependencies:
+
+```bash
+pip install -e ".[test]"
+```
+
+Run all tests:
+
+```bash
+python -m pytest tests/ -v
+```
+
+Run tests for a single service:
+
+```bash
+python -m pytest tests/joke/
+python -m pytest tests/weather/
+python -m pytest tests/summary/
+```
