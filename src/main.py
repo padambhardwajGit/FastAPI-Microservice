@@ -8,6 +8,7 @@ from src.config import AppConfig
 from src.exceptions import register_exception_handlers
 from src.joke.router import router as joke_router
 from src.weather.router import router as weather_router
+from src.summary.router import router as summary_router
 
 app_settings = AppConfig()
 
@@ -31,3 +32,4 @@ register_exception_handlers(app)
 
 app.include_router(weather_router)
 app.include_router(joke_router)
+app.include_router(summary_router)
